@@ -40,7 +40,7 @@ df = spark \
      .format('csv') \
      .option("header",'true') \
      .option("inferSchema",'true')\
-     .load('s3://vidya-sankalp-datasets/health-care/2024_05_08T04_08_53Z/claims/')
+     .load('/Volumes/test/s3_test/health-care/allergies.csv')
 """
      The show() function in Spark DataFrame is used to display the contents of the DataFrame in a tabular format.
      Spark will display a certain number of rows from the DataFrame, usually the first 20 rows by default
@@ -52,7 +52,7 @@ df = spark \
      n: An alias for numRows.
      df.show(n=100, truncate=False, vertical=True)  # Display without truncating and in vertical format
 """
-df.show()
+display(df)
 
 # COMMAND ----------
 
